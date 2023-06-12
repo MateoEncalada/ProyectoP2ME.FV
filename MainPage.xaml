@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoP2ME.FV.MainPage">
+
+    <StackLayout Padding="10">
+        <Label Text="Bienvenido - UNIVERSIDAD DE LAS AMERICAS" FontSize="30" HorizontalOptions="Center" Margin="0,10,0,0" />
+        <Label Text=" " FontSize="15" HorizontalOptions="Center" Margin="0,10,0,0" />
+        <Label Text="En la Universidad de las Américas, el conocimiento es un elemento crucial para el éxito académico y profesional."
+                   Margin="0,10,0,0" />
+
+
+
+        <Label Text="Cada nuevo semestre para los estudiantes es un desafío nuevo y la necesidad de elegir un nuevo horario suele ser un gran problema, debido a la importancia que esta conlleva decidimos crear student help para facilitar la toma de decisión de los estudiantes."
+                   Margin="0,10,0,0" />
+
+
+
+        <Label Text="La manera en la que aportan a los alumnos es brindándoles información acerca de los docentes, una calificación del profesor donde los estudiantes que ya han tomado materia con este docente podrán dar su sincera opinión, una descripción breve de cómo se siente el estudiante con el profesor, una cualidad del docente y el horario en el que el docente labora."
+                   Margin="0,10,0,0" />
+
+
+
+        <Label Text="Asimismo, la página web tiene como uno de sus objetivos principales generar un apoyo directo de estudiante a estudiante, lo que puede ayudar a mejorar su vida estudiantil."
+                   Margin="0,10,0,0" />
+    </StackLayout>
+
+</ContentPage>
