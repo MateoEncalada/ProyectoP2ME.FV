@@ -9,12 +9,19 @@
 
 
 
+            <Label Text="Semestre:"/>
             <Entry x:Name="semesterEntry" Placeholder="Semestre" />
+            <Label Text="Materia:"/>
             <Entry x:Name="subjectEntry" Placeholder="Materia" />
+            <Label Text="Nombre del profesor:"/>
             <Entry x:Name="professorEntry" Placeholder="Nombre del profesor" />
+            <Label Text="Calificación:"/>
             <Entry x:Name="ratingEntry" Placeholder="Calificación" />
+            <Label Text="Descripción"/>
             <Entry x:Name="descriptionEntry" Placeholder="Descripción" />
+            <Label Text="Calificación:"/>
             <Entry x:Name="qualityEntry" Placeholder="Cualidad" />
+            <Label Text="Calificación:"/>
             <Entry x:Name="scheduleEntry" Placeholder="Horario" />
 
 
