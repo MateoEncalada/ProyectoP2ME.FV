@@ -14,5 +14,9 @@
         Title="Objetivos"
         ContentTemplate="{DataTemplate local:ObjetivosME_FV}"
         Route="Nuestros Objetivos" />
+    <ShellContent
+        Title="Recomendacion"
+        ContentTemplate="{DataTemplate local:PrincipalME_FV}"
+        Route="Profes" />
     
 </Shell>
