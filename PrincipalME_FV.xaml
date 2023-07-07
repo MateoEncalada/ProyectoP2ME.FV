@@ -4,6 +4,8 @@
              x:Class="ProyectoP2ME.FV.PrincipalME_FV"
              Title="PrincipalME_FV">
     <ContentPage.Content>
+        <ScrollView>  
+            
         <StackLayout Padding="10">
             <Label Text="Ingrese la información:" FontSize="20" HorizontalOptions="Center" Margin="0,0,0,10" />
 
@@ -19,9 +21,9 @@
             <Entry x:Name="ratingEntry" Placeholder="Calificación" />
             <Label Text="Descripción"/>
             <Entry x:Name="descriptionEntry" Placeholder="Descripción" />
-            <Label Text="Calificación:"/>
+            <Label Text="Cualidad:"/>
             <Entry x:Name="qualityEntry" Placeholder="Cualidad" />
-            <Label Text="Calificación:"/>
+            <Label Text="Horario:"/>
             <Entry x:Name="scheduleEntry" Placeholder="Horario" />
 
 
@@ -34,11 +36,12 @@
             <Button Text="Buscar" Clicked="Search" HorizontalOptions="Center" Margin="0,10,0,0" />
 
 
-
-            <ListView x:Name="infoListView" Margin="0,20,0,0">
+                <ScrollView >
+                    <ListView x:Name="infoListView" Margin="0,20,0,0">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
+                                    <ScrollView>
                             <StackLayout Padding="10">
                                 <Label Text="Semestre:" FontAttributes="Bold" />
                                 <Label Text="{Binding Semestre}" />
@@ -60,10 +63,13 @@
                                 <Button Text="Eliminar" Clicked="DeleteItem" CommandParameter="{Binding}" HorizontalOptions="Start" Margin="0,10,0,0" />
                                 <Button Text="Modificar" Clicked="ModifyItem" CommandParameter="{Binding}" HorizontalOptions="Start" Margin="0,10,0,0" />
                             </StackLayout>
-                        </ViewCell>
+                                    </ScrollView>
+                                </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            </ScrollView>
         </StackLayout>
+      </ScrollView>
     </ContentPage.Content>
 </ContentPage>

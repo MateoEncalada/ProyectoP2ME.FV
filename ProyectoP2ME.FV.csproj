@@ -49,6 +49,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Compile Update="ObjetivosME_FV.xaml.cs">
 	    <DependentUpon>ObjetivosME_FV.xaml</DependentUpon>
 	  </Compile>
