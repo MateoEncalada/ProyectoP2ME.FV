@@ -1,13 +1,19 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ProyectoP2ME.FV.Models
 {
+    //[Table("Informacion")]
     public class InformacionME_FV
     {
+        //[PrimaryKey, AutoIncrement]
+        public int ID { get; set; }
+        //[Column("Semestre")]
         public string Semestre { get; set; }
         public string Materia { get; set; }
         public string NombreProfesor { get; set; }
