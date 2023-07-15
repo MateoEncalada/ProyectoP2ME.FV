@@ -15,26 +15,40 @@ public PrincipalME_FV()
     infoListView.ItemsSource = displayedInformationList;
 }
 
-private void AddToTable(object sender, EventArgs e)
-{
-    InformacionME_FV information = new InformacionME_FV
+    //private void AddToTable(object sender, EventArgs e)
+    //{
+    //    InformacionME_FV information = new InformacionME_FV
+    //    {
+    //        Semestre = semesterEntry.Text,
+    //        Materia = subjectEntry.Text,
+    //        NombreProfesor = professorEntry.Text,
+    //        Calificacion = ratingEntry.Text,
+    //        Descripcion = descriptionEntry.Text,
+    //        Cualidad = qualityEntry.Text,
+    //        Horario = scheduleEntry.Text
+    //    };
+
+    //    informationList.Add(information);
+    //    displayedInformationList.Add(information);
+
+    //    ClearEntries();
+    //}
+    public async void AddToTable(object sender, EventArgs args)
     {
-        Semestre = semesterEntry.Text,
-        Materia = subjectEntry.Text,
-        NombreProfesor = professorEntry.Text,
-        Calificacion = ratingEntry.Text,
-        Descripcion = descriptionEntry.Text,
-        Cualidad = qualityEntry.Text,
-        Horario = scheduleEntry.Text
-    };
+        statusMessage.Text = "";
 
-    informationList.Add(information);
-    displayedInformationList.Add(information);
+        await App.InfoRepo.AddNewInfo(semesterEntry.Text, subjectEntry.Text, professorEntry.Text, ratingEntry.Text, descriptionEntry.Text, qualityEntry.Text, scheduleEntry.Text);
+        statusMessage.Text = App.InfoRepo.StatusMessage;
+    }
+    public async void MostrarLista(object sender, EventArgs args)
+    {
+        statusMessage.Text = "";
 
-    ClearEntries();
-}
+        List<InformacionME_FV> info = await App.InfoRepo.GetAllPeople();
+        infoListView.ItemsSource = info;
+    }
 
-private void Search(object sender, EventArgs e)
+    private void Search(object sender, EventArgs e)
 {
     string searchKeyword = searchEntry.Text.ToLower();
 
@@ -99,4 +113,6 @@ private void ClearEntries()
     qualityEntry.Text = string.Empty;
     scheduleEntry.Text = string.Empty;
 }
-    }
+
+    
+}

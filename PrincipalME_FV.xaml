@@ -26,13 +26,14 @@
             <Label Text="Horario:"/>
             <Entry x:Name="scheduleEntry" Placeholder="Horario" />
 
+                <Label x:Name="statusMessage" />
+
+                <Button Text="Agregar" Clicked="AddToTable" HorizontalOptions="Center" Margin="0,10,0,0" />
+                <Button Text="Mostrar" Clicked="MostrarLista" HorizontalOptions="Center" Margin="0,10,0,0" />
 
 
-            <Button Text="Agregar" Clicked="AddToTable" HorizontalOptions="Center" Margin="0,10,0,0" />
 
-
-
-            <Entry x:Name="searchEntry" Placeholder="Buscar por materia" />
+                <Entry x:Name="searchEntry" Placeholder="Buscar por materia" />
             <Button Text="Buscar" Clicked="Search" HorizontalOptions="Center" Margin="0,10,0,0" />
 
 
