@@ -28,7 +28,7 @@ namespace ProyectoP2ME.FV
         }
 
         public async Task AddNewInfo(
-            int NuevaInfoId, string Semestre, string Materia, string NProfesor, string Calificacion, string Descripcion, string Cualidad, string Horario)
+            /*int NuevaInfoId,*/ string Semestre, string Materia, string NProfesor, string Calificacion, string Descripcion, string Cualidad, string Horario)
         {
             int result = 0;
             try
@@ -36,19 +36,19 @@ namespace ProyectoP2ME.FV
                 await Init();
 
                 // basic validation to ensure a name was entered
-                if (string.IsNullOrEmpty(NuevaInfoId.ToString()))
+                if (string.IsNullOrEmpty(Semestre))
                     throw new Exception("Valid name required");
                 
 
-                result = await conn.InsertAsync(new InformacionME_FV { IdInfo = NuevaInfoId, Materia = Materia, NombreProfesor = NProfesor,
+                result = await conn.InsertAsync(new InformacionME_FV { /*IdInfo = NuevaInfoId*/ Semestre=Semestre, Materia = Materia, NombreProfesor = NProfesor,
                 Calificacion = Calificacion, Descripcion = Descripcion, Cualidad = Cualidad, Horario = Horario, });
 
 
-                StatusMessage = string.Format("{0} record(s) added (Name: {1})", result, NuevaInfoId);
+                StatusMessage = string.Format("{0} record(s) added (Name: {1})", result, Semestre);
             }
             catch (Exception ex)
             {
-                StatusMessage = string.Format("Failed to add {0}. Error: {1}", NuevaInfoId, ex.Message);
+                StatusMessage = string.Format("Failed to add {0}. Error: {1}", Semestre, ex.Message);
             }
 
         }

@@ -15,7 +15,7 @@ namespace ProyectoP2ME.FV.Models
     {
         [PrimaryKey, AutoIncrement,NotNull,Column("Id")]
         public int ID { get; set; }
-        public int IdInfo { get; set; }
+        //public int IdInfo { get; set; }
         [Column("Semestre"), Indexed,NotNull]
         public string Semestre { get; set; }
         [NotNull]
